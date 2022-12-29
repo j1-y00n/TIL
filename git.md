@@ -68,3 +68,92 @@ git clone과 pull의 차이점
 
 - .gitignore
     - 버전관리랑 상관 없는 파일 관리
+    
+<br>
+
+# Branch
+> 독립적인 작업흐름을 만들고 관리
+
+## 주요 명령어
+- git branch {branch name}
+    - branch 생성
+
+- git checkout {branch name}
+    - branch 이동
+
+- git checkout -b {branch name}
+    - branch 생성 및 이동
+
+- git branch
+    - branch 목록 확인
+
+- git branch -d {branch name}
+    - branch 삭제
+
+## merge
+> 각 branch에서 작업을 한 후 이력(commit)을 합치기 위해 merge 명령어를 사용
+
+1. merge-fast foward
+    - 기존 master branch에 변경사항이 없어 단순히 앞으로 이동
+        1. feature-a branch로 이동 후 commit
+        2. master 별도 변경 없음
+        3. master branch로 병합
+2. merge-merge commit
+    - 기존 master branch에 변경사항이 있어 병합 커밋 발생
+        1. feature-a branch로 이동 후 commit
+        2. master branch commit
+        3. master branch로 병합
+
+<br>
+
+# Git Flow
+> Git을 활용하여 협업하는 흐름
+
+> branch를 활용하는 전략
+
+```
+GitHub Flow 기본 원칙
+1. master branch는 반드시 배포 가능한 상태여야 함
+2. feature branch는 각 기능의 의도를 알수 있도록 작성
+3. Commit message는 매우 중요하며, 명확하게 작성
+4. Pull Request를 통해 협업 진행
+5. 변경사항을 반영하고 싶다면, master branch에 병합
+```
+
+## GitHub Flow Models
+- Shared Repository Model
+    1. 팀원 초대 및 저장소 Clone
+        1. Invite collaborator
+        2. Accept Invitation
+        3. Clone project(remote) repository
+    2. branch에서 작업 및 GitHub Push
+        1. Feature branch 생성 및 작업
+        2. Commit
+        3. Push to remote repository
+    3. Pull Request 생성
+        1. Open a Pull Request
+        2. Creat Pull Request
+    4. Review 및 Merge
+        1. Merge pull Request
+    5. 다음 작업 준비
+        1. 로컬저장소에서는 merge된 branch는 삭제하고 master branch를 업데이트 함.
+        2. 이후 1~3 과정 반복.   
+
+- Fork & Pull Request Model
+    1. Fork & Clone
+        1. Fork repository
+        2. Clone project(remote) repository
+   2. branch에서 작업 및 GitHub Push
+        1. Feature branch 생성 및 작업
+        2. Commit
+        3. Push to remote repository
+    3. Pull Request 생성
+        1. Open a Pull Request
+        2. Creat Pull Request
+    4. Review 및 Merge
+        1. Merge pull Request
+    5. 다음 작업 준비
+        1. 로컬저장소에서는 merge된 branch는 삭제하고 master branch를 업데이트 함. 
+
+            ` 단, master branch는 원본 저장소를 받아와야 하며 별도의 원격저장소를 추가하여 진행할 수 있음. 혹은 GitHub에서 fetch upstream도 가능. `
+        2. 이후 1~3 과정 반복. 
