@@ -157,7 +157,7 @@
       WHERE
         officeCode BETWEEN 1 AND 4;
       ```
-        - 테이블 employees에서 officeCode 필드 값이 1에서 4 사이 값()1과 4를 포함)인 데이터의 lastName, firstName, officeCode 조회<br/><br/>
+        - 테이블 employees에서 officeCode 필드 값이 1에서 4 사이 값(1과 4를 포함)인 데이터의 lastName, firstName, officeCode 조회<br/><br/>
       
       ```SQL
       SELECT
