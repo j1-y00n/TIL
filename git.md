@@ -45,7 +45,7 @@ Working directory -add-> Staging area -commit-> Head
 
 - git remote add origin : https://github.com/GitHubusername/저장소이름.git
     - 로컬 저장소에 원격 저장소 정보 설정
-    - 한번만 한면 됨
+    - 한번만 하면 됨
 
 - git remote -v
     - 원격 저장소 정보 확인
