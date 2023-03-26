@@ -1,4 +1,7 @@
-# Python Framework Django 개발환경 설정 가이드 / 가상환경(venv : virtual environment) 설정 가이드
+# Python Framework Django 개발환경 설정 가이드
+<br><br>
+
+# 가상환경(venv : virtual environment) 설정 가이드
 
 >## 가상환경을 사용하는 이유
 - `의존성 관리`
